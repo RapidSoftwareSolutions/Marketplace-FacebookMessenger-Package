@@ -1,5 +1,4 @@
 # FacebookMessenger Package
-git 
 * Domain: facebook.com
 * Credentials: pageAccessToken
 
@@ -745,6 +744,7 @@ Send a message that contains boarding passes for one or more flights or one more
 ```
 
 ## Request example:
+```json
 {
 	"pageAccessToken": "...",
 	"recipientId": "...",
@@ -863,6 +863,7 @@ Send a message that contains boarding passes for one or more flights or one more
 	  }
 	]
 }
+```
 
 <a name="sendAirlineFlightUpdateTemplate"/>
 ## FacebookMessenger.sendAirlineFlightUpdateTemplate
