@@ -1,12 +1,11 @@
 # FacebookMessenger Package
-Texting and so much more.
-
+git 
 * Domain: facebook.com
 * Credentials: pageAccessToken
 
 ## How to get credentials
 
-[Facebook Messenger Platfor Quick Start](https://developers.facebook.com/docs/messenger-platform/quickstart)
+[Facebook Messenger API Quick Start](https://developers.facebook.com/docs/messenger-platform/quickstart)
 
 ## TOC: 
 * [sendTextMessage](#sendTextMessage)
