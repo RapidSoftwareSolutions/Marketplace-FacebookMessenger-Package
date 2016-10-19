@@ -64,10 +64,10 @@ const
     recipientId = '1157490301006750'; 
     
 
-describe('FacebookMessenger package', () => {   
+describe(''+ PACKAGE_NAME +' package', () => {   
 it('/sendTextMessage', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendTextMessage')
+    .post('/api/'+ PACKAGE_NAME +'/sendTextMessage')
     .send({args:{ recipientId, pageAccessToken, message,}})
     .expect(200)
     .then((res) => {
@@ -77,7 +77,7 @@ it('/sendTextMessage', () => {
 
 /*it('/subscribeAppToPage', () => {
     return request(app)
-    .post('/api/FacebookMessenger/subscribeAppToPage')
+    .post('/api/'+ PACKAGE_NAME +'/subscribeAppToPage')
     .send({args:{ pageAccessToken,}})
     .expect(200)
     .then((res) => {});
@@ -85,7 +85,7 @@ it('/sendTextMessage', () => {
 
 it('/validateWebhook', () => {
     return request(app)
-    .post('/api/FacebookMessenger/validateWebhook')
+    .post('/api/'+ PACKAGE_NAME +'/validateWebhook')
     .send({args:{ pageAccessToken, appId, pageId,}})
     .expect(200)
     .then((res) => {
@@ -95,7 +95,7 @@ it('/validateWebhook', () => {
 
 it('/sendAction', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendAction')
+    .post('/api/'+ PACKAGE_NAME +'/sendAction')
     .send({args:{ pageAccessToken, recipientId, senderAction,}})
     .expect(200)
     .then((res) => {
@@ -107,7 +107,7 @@ it('/sendImage', function() {
     this.timeout(10000);
 
     return request(app)
-    .post('/api/FacebookMessenger/sendImage')
+    .post('/api/'+ PACKAGE_NAME +'/sendImage')
     .send({args:{ pageAccessToken, recipientId, image,}})
     .expect(200)
     .then((res) => {
@@ -117,7 +117,7 @@ it('/sendImage', function() {
 
 it('/getUserProfile', () => {
     return request(app)
-    .post('/api/FacebookMessenger/getUserProfile')
+    .post('/api/'+ PACKAGE_NAME +'/getUserProfile')
     .send({args:{ pageAccessToken, userId, fields,}})
     .expect(200)
     .then((res) => {
@@ -127,7 +127,7 @@ it('/getUserProfile', () => {
 
 it('/setPersistentMenu', () => {
     return request(app)
-    .post('/api/FacebookMessenger/setPersistentMenu')
+    .post('/api/'+ PACKAGE_NAME +'/setPersistentMenu')
     .send({args:{ pageAccessToken, callToActions: JSON.stringify([
     {
       "type":"postback",
@@ -148,7 +148,7 @@ it('/setPersistentMenu', () => {
 
 it('/deletePersistentMenu', () => {
     return request(app)
-    .post('/api/FacebookMessenger/deletePersistentMenu')
+    .post('/api/'+ PACKAGE_NAME +'/deletePersistentMenu')
     .send({args:{ pageAccessToken,}})
     .expect(200)
     .then((res) => {
@@ -158,7 +158,7 @@ it('/deletePersistentMenu', () => {
 
 it('/setGetStartedButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/setGetStartedButton')
+    .post('/api/'+ PACKAGE_NAME +'/setGetStartedButton')
     .send({args:{ pageAccessToken, payload,}})
     .expect(200)
     .then((res) => {
@@ -168,7 +168,7 @@ it('/setGetStartedButton', () => {
 
 it('/deleteGetStartedButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/deleteGetStartedButton')
+    .post('/api/'+ PACKAGE_NAME +'/deleteGetStartedButton')
     .send({args:{ pageAccessToken,}})
     .expect(200)
     .then((res) => {
@@ -178,7 +178,7 @@ it('/deleteGetStartedButton', () => {
 
 it('/setGreetingText', () => {
     return request(app)
-    .post('/api/FacebookMessenger/setGreetingText')
+    .post('/api/'+ PACKAGE_NAME +'/setGreetingText')
     .send({args:{ pageAccessToken, text,}})
     .expect(200)
     .then((res) => {
@@ -188,7 +188,7 @@ it('/setGreetingText', () => {
 
 it('/deleteGreetingText', () => {
     return request(app)
-    .post('/api/FacebookMessenger/deleteGreetingText')
+    .post('/api/'+ PACKAGE_NAME +'/deleteGreetingText')
     .send({args:{ pageAccessToken }})
     .expect(200)
     .then((res) => {
@@ -198,7 +198,7 @@ it('/deleteGreetingText', () => {
 
 it('/setWhitelist', () => {
     return request(app)
-    .post('/api/FacebookMessenger/setWhitelist')
+    .post('/api/'+ PACKAGE_NAME +'/setWhitelist')
     .send({args:{ pageAccessToken, whitelistedDomains, domainActionType,}})
     .expect(200)
     .then((res) => {
@@ -208,7 +208,7 @@ it('/setWhitelist', () => {
 
 /*it('/setPaymentPrivacyUrl', () => {
     return request(app)
-    .post('/api/FacebookMessenger/setPaymentPrivacyUrl')
+    .post('/api/'+ PACKAGE_NAME +'/setPaymentPrivacyUrl')
     .send({args:{ pageAccessToken, url,}})
     .expect(200)
     .then((res) => {});
@@ -216,7 +216,7 @@ it('/setWhitelist', () => {
 
 it('/setPaymentPublicKey', () => {
     return request(app)
-    .post('/api/FacebookMessenger/setPaymentPublicKey')
+    .post('/api/'+ PACKAGE_NAME +'/setPaymentPublicKey')
     .send({args:{ pageAccessToken, key,}})
     .expect(200)
     .then((res) => {});
@@ -224,7 +224,7 @@ it('/setPaymentPublicKey', () => {
 
 it('/getPSID', () => {
     return request(app)
-    .post('/api/FacebookMessenger/getPSID')
+    .post('/api/'+ PACKAGE_NAME +'/getPSID')
     .send({args:{ pageAccessToken, accountLinkingToken,}})
     .expect(200)
     .then((res) => {});
@@ -232,7 +232,7 @@ it('/getPSID', () => {
 
 it('/unlinkPSID', () => {
     return request(app)
-    .post('/api/FacebookMessenger/unlinkPSID')
+    .post('/api/'+ PACKAGE_NAME +'/unlinkPSID')
     .send({args:{ pageAccessToken, PSID,}})
     .expect(200)
     .then((res) => {});
@@ -240,7 +240,7 @@ it('/unlinkPSID', () => {
 */
 it('/sendQuickReplyButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendQuickReplyButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendQuickReplyButton')
     .send({args:{ pageAccessToken, recipientId, message: JSON.stringify({
     "text":"Pick a color:",
     "quick_replies":[
@@ -264,7 +264,7 @@ it('/sendQuickReplyButton', () => {
 
 it('/sendShareLocationReplyButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendShareLocationReplyButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendShareLocationReplyButton')
     .send({args:{ pageAccessToken, recipientId, text}})
     .expect(200)
     .then((res) => {
@@ -274,7 +274,7 @@ it('/sendShareLocationReplyButton', () => {
 
 it('/sendGenericTemplate', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendGenericTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendGenericTemplate')
     .send({args:{ pageAccessToken, recipientId, elements: JSON.stringify([
           {
             "title":"Welcome to Peter\'s Hats",
@@ -303,7 +303,7 @@ it('/sendGenericTemplate', () => {
 
 it('/sendButtonTemplate', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendButtonTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendButtonTemplate')
     .send({args:{ pageAccessToken, recipientId, buttons: JSON.stringify([
       {
         "type":"web_url",
@@ -324,7 +324,7 @@ it('/sendButtonTemplate', () => {
 
 it('/sendReceiptTemplate', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendReceiptTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendReceiptTemplate')
     .send({args:{ pageAccessToken, recipientId, recipientName, orderNumber, currency, paymentMethod, orderUrl, timestamp, elements: JSON.stringify([
       {
         "title":"Classic White T-Shirt",
@@ -351,7 +351,7 @@ it('/sendReceiptTemplate', () => {
 
 it('/sendUrlWebButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendUrlWebButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendUrlWebButton')
     .send({args:{ pageAccessToken, recipientId, title, elementTitle, elementItemUrl, elementImageUrl, elementSubtitle, url, webviewHeightRatio, messengerExtensions, fallbackUrl,}})
     .expect(200)
     .then((res) => {
@@ -359,9 +359,11 @@ it('/sendUrlWebButton', () => {
     });
 });
 
-it('/sendPostbackButton', () => {
+it('/sendPostbackButton', function() {
+    this.timeout(5000);
+    
     return request(app)
-    .post('/api/FacebookMessenger/sendPostbackButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendPostbackButton')
     .send({args:{ pageAccessToken, recipientId, elementTitle, elementItemUrl, elementImageUrl, elementSubtitle, title, payload,}})
     .expect(200)
     .then((res) => {
@@ -371,7 +373,7 @@ it('/sendPostbackButton', () => {
 
 it('/sendCallButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendCallButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendCallButton')
     .send({args:{ pageAccessToken, recipientId, title, text, payload: '+380505735370',}})
     .expect(200)
     .then((res) => {
@@ -381,7 +383,7 @@ it('/sendCallButton', () => {
 
 it('/sendShareButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendShareButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendShareButton')
     .send({args:{ pageAccessToken, recipientId, elementTitle, elementItemUrl, elementImageUrl, elementSubtitle,}})
     .expect(200)
     .then((res) => {
@@ -391,7 +393,7 @@ it('/sendShareButton', () => {
 
 /*it('/sendBuyButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendBuyButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendBuyButton')
     .send({args:{ pageAccessToken, recipientId, elementTitle, elementItemUrl, elementImageUrl, elementSubtitle, title, payload, paymentSummaryCurrency, paymentSummaryPaymentType, paymentSummaryMerchantName, paymentSummaryRequestedUserInfo, paymentSummaryPriceList,}})
     .expect(200)
     .then((res) => {});
@@ -399,7 +401,7 @@ it('/sendShareButton', () => {
 
 it('/sendAccountLinkButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendAccountLinkButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendAccountLinkButton')
     .send({args:{ pageAccessToken, recipientId, elementTitle, elementItemUrl, elementImageUrl, elementSubtitle, url}})
     .expect(200)
     .then((res) => {
@@ -409,7 +411,7 @@ it('/sendAccountLinkButton', () => {
 
 it('/sendAccountUnlinkButton', () => {
     return request(app)
-    .post('/api/FacebookMessenger/sendAccountUnlinkButton')
+    .post('/api/'+ PACKAGE_NAME +'/sendAccountUnlinkButton')
     .send({args:{ pageAccessToken, recipientId, elementTitle, elementItemUrl, elementImageUrl, elementSubtitle,}})
     .expect(200)
     .then((res) => {
@@ -421,7 +423,7 @@ it('/sendAirlineItineraryTemplate', function() {
     this.timeout(5000);
 
     return request(app)
-    .post('/api/FacebookMessenger/sendAirlineItineraryTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendAirlineItineraryTemplate')
     .send({args:{ pageAccessToken, recipientId, introMessage, locale, themeColor, pnrNumber, passengerInfo: JSON.stringify( [
       {
         "name": "Farbound Smith Jr",
@@ -542,7 +544,7 @@ it('/sendAirlineCheckinTemplate', function() {
     this.timeout(5000);
 
     return request(app)
-    .post('/api/FacebookMessenger/sendAirlineCheckinTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendAirlineCheckinTemplate')
     .send({args:{ pageAccessToken, recipientId, introMessage, locale, themeColor, pnrNumber, flightInfo: JSON.stringify(
       [{
         "flight_number": "f001",
@@ -573,7 +575,7 @@ it('/sendAirlineBoardingPassTemplate', function () {
     this.timeout(5000);
 
     return request(app)
-    .post('/api/FacebookMessenger/sendAirlineBoardingPassTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendAirlineBoardingPassTemplate')
     .send({args:{ pageAccessToken, recipientId, introMessage, locale, themeColor, boardingPass: JSON.stringify([
       {
         "passenger_name": "SMITH\/NICOLAS",
@@ -696,7 +698,7 @@ it('/sendAirlineFlightUpdateTemplate', function() {
     this.timeout(5000);
 
     return request(app)
-    .post('/api/FacebookMessenger/sendAirlineFlightUpdateTemplate')
+    .post('/api/'+ PACKAGE_NAME +'/sendAirlineFlightUpdateTemplate')
     .send({args:{ pageAccessToken, recipientId, introMessage, updateType, locale, themeColor, pnrNumber, pnrNumber, updateFlightInfoFlightNumber, updateFlightInfoDepartureAirport: JSON.stringify({
         "airport_code": "SFO",
         "city": "San Francisco",
