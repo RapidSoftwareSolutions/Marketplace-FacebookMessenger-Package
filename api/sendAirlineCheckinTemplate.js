@@ -37,7 +37,7 @@ module.exports = (req, res, callback) => {
     } catch (e) {
         callback('Invalid JSON value.', res, {to});
     }
-    console.log(flightInfo)
+
     request({
         headers: {'Content-Type': 'application/json'},
         method: 'POST',

@@ -3,7 +3,7 @@ const request = require("request");
 
 module.exports = (req, res, callback) => {
     req.body.args = lib.clearArgs(req.body.args, false);    
-    console.log(req.body.args)
+
     let { 
         pageAccessToken,
         elementTitle,
