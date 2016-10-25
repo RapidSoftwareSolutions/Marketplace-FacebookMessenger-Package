@@ -6,7 +6,7 @@ const express       = require('express'),
 
 const PORT          = process.env.PORT || 80;
 
-global.PACKAGE_NAME = "FBMessenger";
+global.PACKAGE_NAME = "FacebookMessenger";
 
 const app = express();
 app.use(bodyParser.json(({limit: '50mb'})));
