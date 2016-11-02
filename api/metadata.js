@@ -256,7 +256,7 @@ module.exports.do = function(req, res){
             "info": "success"
         }],
         "description": "Domain whitelisting is required to use Messenger Extensions."
-    }, {
+    }/*, {
         "name": "setPaymentPrivacyUrl",
         "args": [{
             "name": "pageAccessToken",
@@ -332,7 +332,7 @@ module.exports.do = function(req, res){
             "info": "success"
         }],
         "description": "In certain cases you need to unlink the user page-scoped ID (PSID) programmatically from your backend. To help with this situation we are providing a PSID unlinking endpoint allowing you to unlink the user's account given a valid PSID."
-    }, {
+    }*/, {
         "name": "sendQuickReplyButton",
         "args": [{
             "name": "pageAccessToken",
@@ -683,7 +683,7 @@ module.exports.do = function(req, res){
             "info": "success"
         }],
         "description": "The Share Button enables people to share message bubbles with their contacts using a native share dialog in Messenger."
-    }, {
+    }, /*{
         "name": "sendBuyButton",
         "args": [{
             "name": "pageAccessToken",
@@ -746,7 +746,7 @@ module.exports.do = function(req, res){
             "info": "success"
         }],
         "description": "(BETA) The Buy Button enables you to build a checkout experience in Messenger. This button opens a native checkout dialog in Messenger and enables people to use their information stored in Messenger."
-    }, {
+    },*/ {
         "name": "sendAccountLinkButton",
         "args": [{
             "name": "pageAccessToken",

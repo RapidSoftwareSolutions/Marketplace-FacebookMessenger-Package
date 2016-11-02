@@ -4,7 +4,7 @@ const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs');
 
-const PORT          = process.env.PORT || 80;
+const PORT          = process.env.PORT || 8080;
 
 global.PACKAGE_NAME = "FacebookMessenger";
 
@@ -47,10 +47,10 @@ let callback = (err, res, r) => {
         
     if(err) {
         response.callback = 'error';
-        response.contextWrites[r.to] = r.result || err;
+        response.contextWrites[r.to] = JSON.parse(r.result || err);
     } else {
         response.callback = 'success';
-        response.contextWrites[r.to] = r.result;
+        response.contextWrites[r.to] = JSON.parse(r.result);
     }
 
     res.status(200).send(response);
