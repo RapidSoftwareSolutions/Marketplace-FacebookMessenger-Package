@@ -16,7 +16,7 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !recipientId || !message) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: pageAccessToken, recipientId, message', res, {to});
         return;
     }
 

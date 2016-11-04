@@ -32,7 +32,7 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !recipientId || !recipientName || !orderNumber || !currency || !paymentMethod || !elements) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: pageAccessToken, recipientId, recipientName, orderNumber, currency, paymentMethod, elements', res, {to});
         return;
     }
 

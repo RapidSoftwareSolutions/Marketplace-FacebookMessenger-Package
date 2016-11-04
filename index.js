@@ -47,7 +47,7 @@ let callback = (err, res, r) => {
         
     if(err) {
         response.callback = 'error';
-        response.contextWrites[r.to] = JSON.parse(r.result || err);
+        response.contextWrites[r.to] = err || JSON.parse(r.result);
     } else {
         response.callback = 'success';
         response.contextWrites[r.to] = JSON.parse(r.result);

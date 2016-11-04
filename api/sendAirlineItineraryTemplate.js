@@ -37,7 +37,7 @@ module.exports = (req, res, callback) => {
         || !totalPrice
         || !currency
     ) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: pageAccessToken, recipientId, introMessage, locale, pnrNumber, passengerInfo, flightInfo, passengerSegmentInfo, totalPrice, currency', res, {to});
         return;
     }
 

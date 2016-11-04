@@ -24,7 +24,7 @@ module.exports = (req, res, callback) => {
         || !locale 
         || !boardingPass
     ) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: pageAccessToken, recipientId, introMessage, locale, boardingPass', res, {to});
         return;
     }
 

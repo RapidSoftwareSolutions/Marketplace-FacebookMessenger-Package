@@ -34,7 +34,7 @@ module.exports = (req, res, callback) => {
         || !updateFlightInfoFlightSchedule
         || !updateType
     ) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: recipientId, introMessage, locale, pnrNumber, updateFlightInfoFlightNumber, updateFlightInfoDepartureAirport, updateFlightInfoArrivalAirport, updateFlightInfoFlightSchedule, updateType', res, {to});
         return;
     }
 

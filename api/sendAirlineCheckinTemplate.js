@@ -28,7 +28,7 @@ module.exports = (req, res, callback) => {
         || !flightInfo
         || !checkinUrl
     ) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: recipientId, introMessage, locale, pnrNumber, flightInfo, checkinUrl', res, {to});
         return;
     }
 

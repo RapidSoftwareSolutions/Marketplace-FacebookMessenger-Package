@@ -15,7 +15,7 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !accountLinkingToken) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields: pageAccessToken, accountLinkingToken', res, {to});
         return;
     }
 
