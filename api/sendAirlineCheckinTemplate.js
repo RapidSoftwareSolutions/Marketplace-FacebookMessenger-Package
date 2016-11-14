@@ -28,12 +28,12 @@ module.exports = (req, res, callback) => {
         || !flightInfo
         || !checkinUrl
     ) {
-        callback('Fill in required fields: recipientId, introMessage, locale, pnrNumber, flightInfo, checkinUrl', res, {to});
+        callback('Fill in required fields', res, {to}, ['pageAccessToken', 'recipientId', 'locale', 'pnrNumber', 'flightInfo', 'checkinUrl']);
         return;
     }
 
     try {
-        flightInfo = JSON.parse(flightInfo);
+        if(typeof flightInfo == 'string') flightInfo = JSON.parse(flightInfo);
     } catch (e) {
         callback('Invalid JSON value.', res, {to});
     }

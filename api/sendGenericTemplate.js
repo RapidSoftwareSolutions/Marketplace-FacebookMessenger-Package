@@ -14,12 +14,13 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !recipientId || !elements) {
-        callback('Fill in required fields: pageAccessToken, recipientId, elements', res, {to});
+        callback('Fill in required fields: pageAccessToken, recipientId, elements', res, {to}, 
+            ['pageAccessToken', 'recipientId', 'elements']);
         return;
     }
 
     try {
-        elements = JSON.parse(elements);
+        if(typeof elements == 'string') elements = JSON.parse(elements);
     } catch (e) {
         callback('Invalid elements JSON syntax.', res, {to});
         return;

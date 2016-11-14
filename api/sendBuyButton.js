@@ -31,11 +31,11 @@ module.exports = (req, res, callback) => {
         || !paymentSummaryCurrency 
         || !paymentSummaryPaymentType 
         || !paymentSummaryMerchantName
-        || !paymentSummaryMerchantName
         || !paymentSummaryRequestedUserInfo
         || !paymentSummaryPriceList
     ) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields.', res, {to}, 
+            ['pageAccessToken', 'payload', 'title', 'recipientId', 'paymentSummaryCurrency', 'paymentSummaryCurrency', 'paymentSummaryPaymentType', 'paymentSummaryMerchantName', 'paymentSummaryRequestedUserInfo', 'paymentSummaryPriceList']);
         return;
     }
 

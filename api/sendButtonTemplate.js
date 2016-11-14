@@ -17,12 +17,12 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !recipientId || !buttons) {
-        callback('Fill in required fields: pageAccessToken, recipientId, buttons', res, {to});
+        callback('Fill in required fields', res, {to}, ['pageAccessToken', 'recipientId', 'buttons']);
         return;
     }
 
     try {
-        buttons = JSON.parse(buttons);
+        if(typeof buttons == 'string') buttons = JSON.parse(buttons);
     } catch (e) {
         callback('Invalid buttons JSON syntax.', res, {to});
         return;

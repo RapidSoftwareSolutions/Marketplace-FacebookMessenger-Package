@@ -16,12 +16,13 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !recipientId || !message) {
-        callback('Fill in required fields: pageAccessToken, recipientId, message', res, {to});
+        callback('Fill in required fields', res, {to}, 
+            ['pageAccessToken', 'recipientId', 'message']);
         return;
     }
 
     try {
-        message = JSON.parse(message)
+        if(typeof message == 'string') message = JSON.parse(message)
     } catch (e) {
         callback('Invalid message object.', res, {to});
         return;

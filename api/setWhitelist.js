@@ -16,12 +16,12 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !whitelistedDomains || !domainActionType) {
-        callback('Fill in required fields: pageAccessToken, whitelistedDomains, domainActionType', res, {to});
+        callback('Fill in required fields', res, {to}, ['pageAccessToken', 'whitelistedDomains', 'domainActionType']);
         return;
     }
 
     try {
-        whitelistedDomains = JSON.parse(whitelistedDomains);
+        if(typeof whitelistedDomains == 'string') whitelistedDomains = JSON.parse(whitelistedDomains);
     } catch(e) {
         callback('Invalid whitelistedDomains value. Use ["https://domain.com"] syntax.', res, {to});
     }

@@ -24,12 +24,12 @@ module.exports = (req, res, callback) => {
         || !locale 
         || !boardingPass
     ) {
-        callback('Fill in required fields: pageAccessToken, recipientId, introMessage, locale, boardingPass', res, {to});
+        callback('Fill in required fields', res, {to}, ['pageAccessToken', 'recipientId', 'introMessage', 'locale', 'boardingPass']);
         return;
     }
 
     try {
-        boardingPass = JSON.parse(boardingPass);
+        if(typeof boardingPass == 'string') boardingPass = JSON.parse(boardingPass);
     } catch (e) {
         callback('Invalid boardingPass JSON value.', res, {to});
     }

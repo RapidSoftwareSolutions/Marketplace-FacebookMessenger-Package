@@ -15,7 +15,7 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !url) {
-        callback('Fill in required fields: pageAccessToken, url', res, {to});
+        callback('Fill in required fields', res, {to}, ['pageAccessToken', 'url']);
         return;
     }
 

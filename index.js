@@ -39,15 +39,18 @@ app.post(`/api/${PACKAGE_NAME}/webhook`, function(req, res) {
     }
 });
 
-let callback = (err, res, r) => {
+let callback = (err, res, r, fields) => {
     let response = {
         callback     : "",
         contextWrites: {}
     };
-        
+
     if(err) {
         response.callback = 'error';
-        response.contextWrites[r.to] = err || JSON.parse(r.result);
+        response.contextWrites[r.to] = fields ? {
+            text: 'Please, fill in required fields',
+            fields
+        } : r.result ? JSON.parse(r.result) : err;
     } else {
         response.callback = 'success';
         response.contextWrites[r.to] = JSON.parse(r.result);

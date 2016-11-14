@@ -32,13 +32,14 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !recipientId || !recipientName || !orderNumber || !currency || !paymentMethod || !elements) {
-        callback('Fill in required fields: pageAccessToken, recipientId, recipientName, orderNumber, currency, paymentMethod, elements', res, {to});
+        callback('Fill in required fields', res, {to},
+         ['pageAccessToken', 'recipientId', 'recipientName', 'orderNumber', 'currency', 'paymentMethod', 'elements']);
         return;
     }
 
     try {
-        elements = JSON.parse(elements);
-        if(adjustments) adjustments = JSON.parse(adjustments);
+        if(typeof elements == 'string') elements = JSON.parse(elements);
+        if(adjustments && typeof adjustments == 'string') adjustments = JSON.parse(adjustments);
     } catch (e) {
         callback('Invalid elements or adjustments JSON syntax.', res, {to});
         console.log(e);

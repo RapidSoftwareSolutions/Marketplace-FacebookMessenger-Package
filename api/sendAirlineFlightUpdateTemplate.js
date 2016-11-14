@@ -34,14 +34,15 @@ module.exports = (req, res, callback) => {
         || !updateFlightInfoFlightSchedule
         || !updateType
     ) {
-        callback('Fill in required fields: recipientId, introMessage, locale, pnrNumber, updateFlightInfoFlightNumber, updateFlightInfoDepartureAirport, updateFlightInfoArrivalAirport, updateFlightInfoFlightSchedule, updateType', res, {to});
+        callback('Fill in required fields', res, {to}, 
+            ['pageAccessToken', 'introMessage', 'locale', 'pnrNumber', 'updateFlightInfoFlightNumber', 'updateFlightInfoDepartureAirport', 'updateFlightInfoArrivalAirport', 'updateFlightInfoFlightSchedule', 'updateType']);
         return;
     }
 
     try {
-        if(updateFlightInfoDepartureAirport) updateFlightInfoDepartureAirport = JSON.parse(updateFlightInfoDepartureAirport);
-        if(updateFlightInfoArrivalAirport) updateFlightInfoArrivalAirport = JSON.parse(updateFlightInfoArrivalAirport);
-        if(updateFlightInfoFlightSchedule) updateFlightInfoFlightSchedule = JSON.parse(updateFlightInfoFlightSchedule);
+        if(updateFlightInfoDepartureAirport && typeof updateFlightInfoDepartureAirport == 'string') updateFlightInfoDepartureAirport = JSON.parse(updateFlightInfoDepartureAirport);
+        if(updateFlightInfoArrivalAirport && typeof updateFlightInfoArrivalAirport == 'string') updateFlightInfoArrivalAirport = JSON.parse(updateFlightInfoArrivalAirport);
+        if(updateFlightInfoFlightSchedule && typeof updateFlightInfoFlightSchedule == 'string') updateFlightInfoFlightSchedule = JSON.parse(updateFlightInfoFlightSchedule);
     } catch (e) {
         callback('Invalid JSON value.', res, {to});
     }

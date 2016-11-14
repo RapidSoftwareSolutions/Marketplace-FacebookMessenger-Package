@@ -15,12 +15,12 @@ module.exports = (req, res, callback) => {
     };
 
     if(!pageAccessToken || !callToActions) {
-        callback('Fill in required fields: pageAccessToken, callToActions', res, {to});
+        callback('Fill in required fields', res, {to}, ['pageAccessToken', 'callToAction']);
         return;
     }
 
     try {
-        callToActions = JSON.parse(callToActions)
+        if(typeof callToActions == 'string') callToActions = JSON.parse(callToActions)
     } catch(e) {
         callback('Invalid callToActions JSON value.', res, {to});
         return;

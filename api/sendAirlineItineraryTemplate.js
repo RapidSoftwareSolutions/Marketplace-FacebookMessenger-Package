@@ -37,15 +37,16 @@ module.exports = (req, res, callback) => {
         || !totalPrice
         || !currency
     ) {
-        callback('Fill in required fields: pageAccessToken, recipientId, introMessage, locale, pnrNumber, passengerInfo, flightInfo, passengerSegmentInfo, totalPrice, currency', res, {to});
+        callback('Fill in required fields', res, {to}, 
+            ['pageAccessToken', 'recipientId', 'introMessage', 'locale', 'pnrNumber', 'passengerInfo', 'flightInfo', 'passengerSegmentInfo', 'totalPrice', 'currency']);
         return;
     }
 
     try {
-        if(passengerInfo) passengerInfo = JSON.parse(passengerInfo);
-        if(flightInfo) flightInfo = JSON.parse(flightInfo);
-        if(passengerSegmentInfo) passengerSegmentInfo = JSON.parse(passengerSegmentInfo);
-        if(priceInfo) priceInfo = JSON.parse(priceInfo);
+        if(passengerInfo && typeof passengerInfo == 'string') passengerInfo = JSON.parse(passengerInfo);
+        if(flightInfo && typeof flightInfo == 'string') flightInfo = JSON.parse(flightInfo);
+        if(passengerSegmentInfo && typeof passengerSegmentInfo == 'string') passengerSegmentInfo = JSON.parse(passengerSegmentInfo);
+        if(priceInfo  && typeof priceInfo == 'string') priceInfo = JSON.parse(priceInfo);
     } catch (e) {
         callback('Invalid JSON value.', res, {to});
     }
