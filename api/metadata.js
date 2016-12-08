@@ -16,9 +16,9 @@ module.exports.do = function(req, res){
             name: "sendTextMessage",
             description: "Send Text Message",
             args: [
-                { name: "pageAccessToken", type: "credentials", info: "Your Page Token", required: true, placeholder: "Very long string" },
-                { name: "recipientId", type: "String", info: "ID of Recipient", required: true, placeholder: "#body.id" },
-                { name: "message", type: "String", info: "The message to be sent", required: true, placeholder: "Hello, FB!" }
+                { name: "pageAccessToken", type: "credentials", info: "Your Page Token", required: true, placeholder: "Very long string"},
+                { name: "recipientId", type: "String", info: "ID of Recipient", required: true, placeholder: "#body.id"},
+                { name: "message", type: "String", info: "The message to be sent", required: true, placeholder: "Hello, FB!"}
             ],
             callbacks: [
                 { name: "success", info:"Message was sent", /*suggested:"response.sendMessage"*/ },
@@ -30,7 +30,7 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }],
         "callbacks": [{
@@ -46,17 +46,17 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "appId",
             "type": "String",
-            "info": " App ID obtained from developer.facebook.com",            
+            "info": "App ID obtained from developer.facebook.com",            
             required: true
         }, {
             "name": "pageId",
             "type": "String",
-            "info": " Page ID obtained from developer.facebook.com",            
+            "info": "Page ID obtained from developer.facebook.com",            
             required: true
         }],
         "callbacks": [{
@@ -72,12 +72,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID",            
+            "info": "Recipient ID",            
             required: true
         }, {
             "name": "senderAction",
@@ -98,12 +98,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID",            
+            "info": "Recipient ID",            
             required: true
         }, {
             "name": "image",
@@ -124,17 +124,17 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "userId",
             "type": "String",
-            "info": " User ID",            
+            "info": "User ID",            
             required: true
         }, {
             "name": "fields",
             "type": "String",
-            "info": " Comma separated fields string: `first_name`, `last_name`, `profile_pic`, `locale`, `timezone`, `gender`",
+            "info": "Comma separated fields string: `first_name`, `last_name`, `profile_pic`, `locale`, `timezone`, `gender`",
             required: true
         }],
         "callbacks": [{
@@ -150,12 +150,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "callToActions",
             "type": "JSON",
-            "info": " Array of menu_item object",            
+            "info": "Array of menu_item object",            
             required: true
         }],
         "callbacks": [{
@@ -171,7 +171,7 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }],
         "callbacks": [{
@@ -187,7 +187,7 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "payload",
@@ -208,7 +208,7 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }],
         "callbacks": [{
@@ -224,12 +224,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "text",
             "type": "String",
-            "info": " Greeting text",
+            "info": "Greeting text",
             required: true
         }],
         "callbacks": [{
@@ -245,7 +245,7 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }],
         "callbacks": [{
@@ -261,12 +261,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "whitelistedDomains",
             "type": "JSON",
-            "info": " A list of domains being used with URL Buttons and Messenger Extensions. All domains must be valid and use https. Up to 10 domains allowed.",
+            "info": "A list of domains being used with URL Buttons and Messenger Extensions. All domains must be valid and use https. Up to 10 domains allowed.",
             required: true
         }, {
             "name": "domainActionType",
@@ -287,12 +287,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "url",
             "type": "String",
-            "info": " Payment Privacy Url",
+            "info": "Payment Privacy Url",
             required: true
         }],
         "callbacks": [{
@@ -308,12 +308,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "key",
             "type": "String",
-            "info": " Payment Public Key.",
+            "info": "Payment Public Key.",
             required: true
         }],
         "callbacks": [{
@@ -329,12 +329,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "accountLinkingToken",
             "type": "String",
-            "info": " Short-lived token passed by Messenger which you need to pass back as part of the redirect scheme. This token is only valid for 5 minutes, it is encrypted and unique per user.",
+            "info": "Short-lived token passed by Messenger which you need to pass back as part of the redirect scheme. This token is only valid for 5 minutes, it is encrypted and unique per user.",
             required: true
         }],
         "callbacks": [{
@@ -350,12 +350,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "PSID",
             "type": "String",
-            "info": " PSID.",
+            "info": "PSID.",
             required: true
         }],
         "callbacks": [{
@@ -371,12 +371,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "message",
@@ -397,12 +397,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "text",
@@ -423,17 +423,17 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "elements",
             "type": "JSON",
-            "info": " Data for each bubble in message.",
+            "info": "Data for each bubble in message.",
             required: true
         }],
         "callbacks": [{
@@ -449,12 +449,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "buttons",
@@ -480,17 +480,17 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "recipientName",
             "type": "String",
-            "info": " Recipient's name.",
+            "info": "Recipient's name.",
             required: true
         }, {
             "name": "orderNumber",
@@ -519,37 +519,37 @@ module.exports.do = function(req, res){
         }, {
             "name": "elements",
             "type": "JSON",
-            "info": " Items in order.",
+            "info": "Items in order.",
             required: true
         }, {
             "name": "addressStreet1",
             "type": "String",
-            "info": " Street address, line 1",
+            "info": "Street address, line 1",
             required: true
         }, {
             "name": "addressStreet2",
             "type": "String",
-            "info": " Street address, line 2",
+            "info": "Street address, line 2",
             required: true
         }, {
             "name": "addressCity",
             "type": "String",
-            "info": " City",
+            "info": "City",
             required: true
         }, {
             "name": "addressPostalCode",
             "type": "String",
-            "info": " Postal code",
+            "info": "Postal code",
             required: true
         }, {
             "name": "addressState",
             "type": "String",
-            "info": " State abbreviation or Region/Province (international)",
+            "info": "State abbreviation or Region/Province (international)",
             required: true
         }, {
             "name": "addressCountry",
             "type": "String",
-            "info": " Two-letter country abbreviation",
+            "info": "Two-letter country abbreviation",
             required: true
         }, {
             "name": "summarySubtotal",
@@ -569,7 +569,7 @@ module.exports.do = function(req, res){
         }, {
             "name": "summaryTotalCost",
             "type": "String",
-            "info": " Total cost",
+            "info": "Total cost",
             required: true
         }, {
             "name": "adjustments",
@@ -590,17 +590,17 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "title",
             "type": "String",
-            "info": " Button title. 20 character limit.",            
+            "info": "Button title. 20 character limit.",            
             required: true
         }, {
             "name": "elementTitle",
@@ -625,7 +625,7 @@ module.exports.do = function(req, res){
         }, {
             "name": "url",
             "type": "String",
-            "info": " This URL is opened in a mobile browser when the button is tapped",
+            "info": "This URL is opened in a mobile browser when the button is tapped",
             required: true
         }, {
             "name": "webviewHeightRatio",
@@ -656,12 +656,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "elementTitle",
@@ -686,12 +686,12 @@ module.exports.do = function(req, res){
         }, {
             "name": "title",
             "type": "String",
-            "info": " Button title. 20 character limit.",            
+            "info": "Button title. 20 character limit.",            
             required: true
         }, {
             "name": "payload",
             "type": "String",
-            "info": " This data will be sent back to your webhook. 1000 character limit.",
+            "info": "This data will be sent back to your webhook. 1000 character limit.",
             required: true
         }],
         "callbacks": [{
@@ -707,17 +707,17 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "title",
             "type": "String",
-            "info": " Button title. 20 character limit.",            
+            "info": "Button title. 20 character limit.",            
             required: true
         }, {
             "name": "text",
@@ -727,7 +727,7 @@ module.exports.do = function(req, res){
         }, {
             "name": "payload",
             "type": "String",
-            "info": " Format must have '+' prefix followed by the country code, area code and local number. For example, `+16505551234`.",
+            "info": "Format must have '+' prefix followed by the country code, area code and local number. For example, `+16505551234`.",
             required: true
         }],
         "callbacks": [{
@@ -743,12 +743,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "elementTitle",
@@ -784,12 +784,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "elementTitle",
@@ -814,37 +814,37 @@ module.exports.do = function(req, res){
         }, {
             "name": "title",
             "type": "String",
-            "info": " Title of Buy Button. Must be 'buy'."  
+            "info": "Title of Buy Button. Must be 'buy'." 
             required: true
         }, {
             "name": "payload",
             "type": "String",
-            "info": " Developer defined metadata about the purchase."  
+            "info": "Developer defined metadata about the purchase." 
             required: true
         }, {
             "name": "paymentSummaryCurrency",
             "type": "String",
-            "info": " Currency for price."  
+            "info": "Currency for price." 
             required: true
         }, {
             "name": "paymentSummaryPaymentType",
             "type": "String",
-            "info": " Must be `FIXED_AMOUNT` or `FLEXIBLE_AMOUNT`."  
+            "info": "Must be `FIXED_AMOUNT` or `FLEXIBLE_AMOUNT`." 
             required: true
         }, {
             "name": "paymentSummaryMerchantName",
             "type": "String",
-            "info": " Name of merchant."  
+            "info": "Name of merchant." 
             required: true
         }, {
             "name": "paymentSummaryRequestedUserInfo",
             "type": "JSON",
-            "info": " Information requested from person that will render in the dialog. Valid values: `shipping_address`, `contact_name`, `contact_phone`, `contact_email`."  
+            "info": "Information requested from person that will render in the dialog. Valid values: `shipping_address`, `contact_name`, `contact_phone`, `contact_email`." 
             required: true
         }, {
             "name": "paymentSummaryPriceList",
             "type": "JSON",
-            "info": " List of objects used to calculate total price. Each label is rendered as a line item in the checkout dialog."  
+            "info": "List of objects used to calculate total price. Each label is rendered as a line item in the checkout dialog." 
             required: true
         }],
         "callbacks": [{
@@ -860,12 +860,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "elementTitle",
@@ -906,12 +906,12 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "elementTitle",
@@ -947,22 +947,22 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "introMessage",
             "type": "String",
-            "info": " Introduction message.",
+            "info": "Introduction message.",
             required: true
         }, {
             "name": "locale",
             "type": "String",
-            "info": " Two-letter language region code.",
+            "info": "Two-letter language region code.",
             required: true
         }, {
             "name": "themeColor",
@@ -972,17 +972,17 @@ module.exports.do = function(req, res){
         }, {
             "name": "pnrNumber",
             "type": "String",
-            "info": " Required: Passenger name record number (Booking Number).",
+            "info": "Required: Passenger name record number (Booking Number).",
             required: true
         }, {
             "name": "passengerInfo",
             "type": "JSON",
-            "info": " Passenger name record number (Booking Number). Array of `passenger_info`",
+            "info": "Passenger name record number (Booking Number). Array of `passenger_info`",
             required: true
         }, {
             "name": "flightInfo",
             "type": "String",
-            "info": " Information about a flight. Array of `flight_info`",
+            "info": "Information about a flight. Array of `flight_info`",
             required: true
         }, {
             "name": "passengerSegmentInfo",
@@ -1012,7 +1012,7 @@ module.exports.do = function(req, res){
         }, {
             "name": "currency",
             "type": "String",
-            "info": " Pricing currency",
+            "info": "Pricing currency",
             required: true
         }],
         "callbacks": [{
@@ -1028,22 +1028,22 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "introMessage",
             "type": "String",
-            "info": " Introduction message.",
+            "info": "Introduction message.",
             required: true
         }, {
             "name": "locale",
             "type": "String",
-            "info": " Two-letter language region code.",
+            "info": "Two-letter language region code.",
             required: true
         }, {
             "name": "themeColor",
@@ -1053,17 +1053,17 @@ module.exports.do = function(req, res){
         }, {
             "name": "pnrNumber",
             "type": "String",
-            "info": " Required: Passenger name record number (Booking Number).",
+            "info": "Required: Passenger name record number (Booking Number).",
             required: true
         }, {
             "name": "flightInfo",
             "type": "JSON",
-            "info": " Information about a flight. Array of `passenger_segment_info`",
+            "info": "Information about a flight. Array of `passenger_segment_info`",
             required: true
         }, {
             "name": "checkinUrl",
             "type": "String",
-            "info": " URL for passengers to check-in",
+            "info": "URL for passengers to check-in",
             required: true
         }],
         "callbacks": [{
@@ -1079,22 +1079,22 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "introMessage",
             "type": "String",
-            "info": " Introduction message.",
+            "info": "Introduction message.",
             required: true
         }, {
             "name": "locale",
             "type": "String",
-            "info": " Two-letter language region code.",
+            "info": "Two-letter language region code.",
             required: true
         }, {
             "name": "themeColor",
@@ -1104,7 +1104,7 @@ module.exports.do = function(req, res){
         }, {
             "name": "boardingPass",
             "type": "JSON",
-            "info": " Boarding passes for passengers.",
+            "info": "Boarding passes for passengers.",
             required: true
         }],
         "callbacks": [{
@@ -1120,27 +1120,27 @@ module.exports.do = function(req, res){
         "args": [{
             "name": "pageAccessToken",
             "type": "credentials",
-            "info": " Page Access Token obtained from developer.facebook.com",
+            "info": "Page Access Token obtained from developer.facebook.com",
             required: true
         }, {
             "name": "recipientId",
             "type": "String",
-            "info": " Recipient ID.",
+            "info": "Recipient ID.",
             required: true
         }, {
             "name": "introMessage",
             "type": "String",
-            "info": " Introduction message.",
+            "info": "Introduction message.",
             required: true
         }, {
             "name": "updateType",
             "type": "String",
-            "info": " Type of update for this notification.",
+            "info": "Type of update for this notification.",
             required: true
         }, {
             "name": "locale",
             "type": "String",
-            "info": " Two-letter language region code.",
+            "info": "Two-letter language region code.",
             required: true
         }, {
             "name": "themeColor",
@@ -1150,27 +1150,27 @@ module.exports.do = function(req, res){
         }, {
             "name": "pnrNumber",
             "type": "String",
-            "info": " Passenger name record number (Booking Number).",
+            "info": "Passenger name record number (Booking Number).",
             required: true
         }, {
             "name": "updateFlightInfoFlightNumber",
             "type": "String",
-            "info": " Flight number",
+            "info": "Flight number",
             required: true
         }, {
             "name": "updateFlightInfoDepartureAirport",
             "type": "JSON",
-            "info": " Departure airport (airport object)",
+            "info": "Departure airport (airport object)",
             required: true
         }, {
             "name": "updateFlightInfoArrivalAirport",
             "type": "JSON",
-            "info": " Arrival airport",
+            "info": "Arrival airport",
             required: true
         }, {
             "name": "updateFlightInfoFlightSchedule",
             "type": "JSON",
-            "info": " Schedule for the flight. flight_schedule object",
+            "info": "Schedule for the flight. flight_schedule object",
             required: true
         }],
         "callbacks": [{
