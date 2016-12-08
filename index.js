@@ -46,11 +46,12 @@ let callback = (err, res, r, fields) => {
     };
 
     if(err) {
+        let e = fields 
+            ? {status_code: 'REQUIRED_FIELDS', status_msg: 'Please, check and fill in required fields.', fields}
+            : {status_code: 'API_ERROR', status_msg: r.result ? JSON.parse(r.result) : err};
+
         response.callback = 'error';
-        response.contextWrites[r.to] = fields ? {
-            text: 'Please, fill in required fields',
-            fields
-        } : r.result ? JSON.parse(r.result) : err;
+        response.contextWrites[r.to] = e;
     } else {
         response.callback = 'success';
         response.contextWrites[r.to] = JSON.parse(r.result);
