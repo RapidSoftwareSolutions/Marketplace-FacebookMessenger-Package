@@ -6,42 +6,7 @@
 
 [Facebook Messenger API Quick Start](https://developers.facebook.com/docs/messenger-platform/quickstart)
 
-## TOC: 
-* [sendTextMessage](#sendTextMessage)
-* [subscribeAppToPage](#subscribeAppToPage)
-* [validateWebhook](#validateWebhook)
-* [sendAction](#sendAction)
-* [sendImage](#sendImage)
-* [getUserProfile](#getUserProfile)
-* [setPersistentMenu](#setPersistentMenu)
-* [deletePersistentMenu](#deletePersistentMenu)
-* [setGetStartedButton](#setGetStartedButton)
-* [deleteGetStartedButton](#deleteGetStartedButton)
-* [setGreetingText](#setGreetingText)
-* [deleteGreetingText](#deleteGreetingText)
-* [setWhitelist](#setWhitelist)
-* [setPaymentPrivacyUrl](#setPaymentPrivacyUrl)
-* [setPaymentPublicKey](#setPaymentPublicKey)
-* [getPSID](#getPSID)
-* [unlinkPSID](#unlinkPSID)
-* [sendQuickReplyButton](#sendQuickReplyButton)
-* [sendShareLocationReplyButton](#sendShareLocationReplyButton)
-* [sendGenericTemplate](#sendGenericTemplate)
-* [sendButtonTemplate](#sendButtonTemplate)
-* [sendReceiptTemplate](#sendReceiptTemplate)
-* [sendUrlWebButton](#sendUrlWebButton)
-* [sendPostbackButton](#sendPostbackButton)
-* [sendCallButton](#sendCallButton)
-* [sendShareButton](#sendShareButton)
-* [sendBuyButton](#sendBuyButton)
-* [sendAccountLinkButton](#sendAccountLinkButton)
-* [sendAccountUnlinkButton](#sendAccountUnlinkButton)
-* [sendAirlineItineraryTemplate](#sendAirlineItineraryTemplate)
-* [sendAirlineCheckinTemplate](#sendAirlineCheckinTemplate)
-* [sendAirlineBoardingPassTemplate](#sendAirlineBoardingPassTemplate)
-* [sendAirlineFlightUpdateTemplate](#sendAirlineFlightUpdateTemplate)
- 
-<a name="sendTextMessage"/>
+
 ## FacebookMessenger.sendTextMessage
 Send Text Message
 
@@ -51,7 +16,7 @@ Send Text Message
 | pageAccessToken| credentials| Your Page Token
 | message        | String     | The message to be sent
 
-<a name="subscribeAppToPage"/>
+
 ## FacebookMessenger.subscribeAppToPage
 Subscribe an app to get updates for a page.
 
@@ -59,7 +24,7 @@ Subscribe an app to get updates for a page.
 |----------------|------------|----------
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 
-<a name="validateWebhook"/>
+
 ## FacebookMessenger.validateWebhook
 Test if your webhook works correctly and you're subscribed to a page.
 
@@ -69,7 +34,7 @@ Test if your webhook works correctly and you're subscribed to a page.
 | appId          | String     | Required: App ID obtained from developer.facebook.com
 | pageId         | String     | Required: Page ID obtained from developer.facebook.com
 
-<a name="sendAction"/>
+
 ## FacebookMessenger.sendAction
 Set typing indicators or send read receipts using the Send API, to let users know you are processing their request.
 
@@ -79,7 +44,7 @@ Set typing indicators or send read receipts using the Send API, to let users kno
 | recipientId    | String     | Required: Recipient ID
 | senderAction   | String     | `mark_seen`: Mark last message as read; `typing_on`: Turn typing indicators on; `typing_off`: Turn typing indicators off.
 
-<a name="sendImage"/>
+
 ## FacebookMessenger.sendImage
 You can send images by uploading them or sharing a URL using the Send API. Supported formats are jpg, png and gif.
 
@@ -89,7 +54,7 @@ You can send images by uploading them or sharing a URL using the Send API. Suppo
 | recipientId    | String     | Required: Recipient ID
 | image          | String     | URL of image
 
-<a name="getUserProfile"/>
+
 ## FacebookMessenger.getUserProfile
 Returns a json string with the requested details about the user.
 
@@ -99,7 +64,7 @@ Returns a json string with the requested details about the user.
 | userId         | String     | Required: User ID
 | fields         | String     | Required: Comma separated fields string: `first_name`, `last_name`, `profile_pic`, `locale`, `timezone`, `gender`
 
-<a name="setPersistentMenu"/>
+
 ## FacebookMessenger.setPersistentMenu
 The Persistent Menu is a menu that is always available to the user. This menu should contain top-level actions that users can enact at any point. Having a persistent menu easily communicates the basic capabilities of your bot for first-time and returning users. The menu can be invoked by a user, by tapping on the 3-caret icon on the left of the composer.
 
@@ -120,7 +85,7 @@ menu_item object:
 },
 ```
 
-<a name="deletePersistentMenu"/>
+
 ## FacebookMessenger.deletePersistentMenu
 Delete the Psersistent Menu.
 
@@ -128,7 +93,7 @@ Delete the Psersistent Menu.
 |----------------|------------|----------
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 
-<a name="setGetStartedButton"/>
+
 ## FacebookMessenger.setGetStartedButton
 The Welcome Screen can display a Get Started button. When this button is tapped, we will trigger the postback received callback and deliver the person's page-scoped ID (PSID). You can then present a personalized message to greet the user or present buttons to prompt him or her to take an action.
 
@@ -137,7 +102,7 @@ The Welcome Screen can display a Get Started button. When this button is tapped,
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 | payload        | String     | This data will be sent back to you via webhook.
 
-<a name="deleteGetStartedButton"/>
+
 ## FacebookMessenger.deleteGetStartedButton
 Delete the Get Started button.
 
@@ -145,7 +110,7 @@ Delete the Get Started button.
 |----------------|------------|----------
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 
-<a name="setGreetingText"/>
+
 ## FacebookMessenger.setGreetingText
 You can set a greeting for new conversations. This can be used to communicate your bot's functionality. If the greeting text is not set, the page description will be shown in the welcome screen. You can personalize the text with the person's name.
 
@@ -154,7 +119,7 @@ You can set a greeting for new conversations. This can be used to communicate yo
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 | text           | String     | Required: Greeting text
 
-<a name="deleteGreetingText"/>
+
 ## FacebookMessenger.deleteGreetingText
 Delete the Greeting Text.
 
@@ -162,7 +127,7 @@ Delete the Greeting Text.
 |----------------|------------|----------
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 
-<a name="setWhitelist"/>
+
 ## FacebookMessenger.setWhitelist
 Domain whitelisting is required to use Messenger Extensions.
 
@@ -177,7 +142,7 @@ whitelistedDomains format:
 ["domain.com", "anotherdomain.com"]
 ```
 
-<a name="setPaymentPrivacyUrl"/>
+
 ## FacebookMessenger.setPaymentPrivacyUrl
 The payment_privacy_url will appear in our payment dialogs and people will be able to view these terms.
 
@@ -186,7 +151,7 @@ The payment_privacy_url will appear in our payment dialogs and people will be ab
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 | url            | String     | Required: Payment Privacy Url
 
-<a name="setPaymentPublicKey"/>
+
 ## FacebookMessenger.setPaymentPublicKey
 The payment_public_key is used to encrypt sensitive payment data sent to you.
 
@@ -195,7 +160,7 @@ The payment_public_key is used to encrypt sensitive payment data sent to you.
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 | key            | String     | Required: Payment Public Key.
 
-<a name="getPSID"/>
+
 ## FacebookMessenger.getPSID
 In certain cases you need to retrieve the user page-scoped ID (PSID) during the linking flow. To help with this situation we are providing a PSID retrieval endpoint allowing you to fetch the user's PSID given a valid and unexpired account_linking_token.
 
@@ -204,7 +169,7 @@ In certain cases you need to retrieve the user page-scoped ID (PSID) during the 
 | pageAccessToken    | credentials| Required: Page Access Token obtained from developer.facebook.com
 | accountLinkingToken| String     | Required: Short-lived token passed by Messenger which you need to pass back as part of the redirect scheme. This token is only valid for 5 minutes, it is encrypted and unique per user.
 
-<a name="unlinkPSID"/>
+
 ## FacebookMessenger.unlinkPSID
 In certain cases you need to unlink the user page-scoped ID (PSID) programmatically from your backend. To help with this situation we are providing a PSID unlinking endpoint allowing you to unlink the user's account given a valid PSID.
 
@@ -213,7 +178,7 @@ In certain cases you need to unlink the user page-scoped ID (PSID) programmatica
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 | PSID           | String     | Required: PSID.
 
-<a name="sendQuickReplyButton"/>
+
 ## FacebookMessenger.sendQuickReplyButton
 Quick Replies provide a new way to present buttons to the user. Quick Replies appear prominently above the composer, with the keyboard less prominent. When a quick reply is tapped, the message is sent in the conversation with developer-defined metadata in the callback. Also, the buttons are dismissed preventing the issue where users could tap on buttons attached to old messages in a conversation.
 
@@ -238,7 +203,7 @@ message object:
 ]
 ```
 
-<a name="sendShareLocationReplyButton"/>
+
 ## FacebookMessenger.sendShareLocationReplyButton
 Method description
 
@@ -248,7 +213,7 @@ Method description
 | recipientId    | String     | Required: Recipient ID.
 | text           | String     | Text of message.
 
-<a name="sendGenericTemplate"/>
+
 ## FacebookMessenger.sendGenericTemplate
 Use the Generic Template with the Send API to send a horizontal scrollable carousel of items, each composed of an image attachment, short description and buttons to request input from the user.
 
@@ -267,7 +232,7 @@ elements object:
 "buttons": "Url|Postback|Call|Share|Buy button object (see send_TYPE_Button methods)."
 ```
 
-<a name="sendButtonTemplate"/>
+
 ## FacebookMessenger.sendButtonTemplate
 Use the Button Template with the Send API to send a text and buttons attachment to request input from the user. The buttons can open a URL, or make a back-end call to your webhook.
 
@@ -278,7 +243,7 @@ Use the Button Template with the Send API to send a text and buttons attachment 
 | buttons        | JSON       | Array of button objects (see send_TYPE_Button methods).
 | text           | String     | Text that appears in main body
 
-<a name="sendReceiptTemplate"/>
+
 ## FacebookMessenger.sendReceiptTemplate
 Use the Receipt Template with the Send API to send a order confirmation, with the transaction summary and description for each item.
 
@@ -321,7 +286,7 @@ Use the Receipt Template with the Send API to send a order confirmation, with th
 "amount": "Adjustment amount"
 ```
 
-<a name="sendUrlWebButton"/>
+
 ## FacebookMessenger.sendUrlWebButton
 The URL Button can be used to open a web page in the in-app browser. This button can be used with the Button and Generic Templates.
 
@@ -339,7 +304,7 @@ The URL Button can be used to open a web page in the in-app browser. This button
 | messengerExtensions| String     | Must be true if using Messenger Extensions.
 | fallbackUrl        | String     | URL to use on clients that don't support Messenger Extensions. If this is not defined, the url will be used as the fallback.
 
-<a name="sendPostbackButton"/>
+
 ## FacebookMessenger.sendPostbackButton
 When a Postback Button is tapped, we will send a call to your webhook. This is useful when you want to send a person's action to your bot. This button can be used with the Button and Generic Templates.
 
@@ -354,7 +319,7 @@ When a Postback Button is tapped, we will send a call to your webhook. This is u
 | title          | String     | Required: Button title. 20 character limit.
 | payload        | String     | Required: This data will be sent back to your webhook. 1000 character limit.
 
-<a name="sendCallButton"/>
+
 ## FacebookMessenger.sendCallButton
 The Call Button can be used to initiate a phone call. This button can be used with the Button and Generic Templates.
 
@@ -366,7 +331,7 @@ The Call Button can be used to initiate a phone call. This button can be used wi
 | text           | String     | Text of message
 | payload        | String     | Required: Format must have '+' prefix followed by the country code, area code and local number. For example, `+16505551234`.
 
-<a name="sendShareButton"/>
+
 ## FacebookMessenger.sendShareButton
 The Share Button enables people to share message bubbles with their contacts using a native share dialog in Messenger.
 
@@ -379,7 +344,7 @@ The Share Button enables people to share message bubbles with their contacts usi
 | elementImageUrl| String     | Element Image Url.
 | elementSubtitle| String     | Element Subtitle.
 
-<a name="sendBuyButton"/>
+
 ## FacebookMessenger.sendBuyButton
 (BETA) The Buy Button enables you to build a checkout experience in Messenger. This button opens a native checkout dialog in Messenger and enables people to use their information stored in Messenger.
 
@@ -416,7 +381,7 @@ The Share Button enables people to share message bubbles with their contacts usi
 	"amount": "Amount of line item, required"
 }
 ```
-<a name="sendAccountLinkButton"/>
+
 ## FacebookMessenger.sendAccountLinkButton
 The account linking authentication flow can be triggered by using a specific button type described below.
 
@@ -430,7 +395,7 @@ The account linking authentication flow can be triggered by using a specific but
 | elementSubtitle| String     | Element Subtitle.
 | url            | String     | Authentication callback URL. Must be using https protocol.
 
-<a name="sendAccountUnlinkButton"/>
+
 ## FacebookMessenger.sendAccountUnlinkButton
 Account unlinking can be triggered by using a specific type of button described below.
 
@@ -443,7 +408,7 @@ Account unlinking can be triggered by using a specific type of button described 
 | elementImageUrl| String     | Element Image Url.
 | elementSubtitle| String     | Element Subtitle.
 
-<a name="sendAirlineItineraryTemplate"/>
+
 ## FacebookMessenger.sendAirlineItineraryTemplate
 Send a confirmation message that contains the itinerary and receipt.
 
@@ -662,7 +627,7 @@ Send a confirmation message that contains the itinerary and receipt.
 }
 ```
 
-<a name="sendAirlineCheckinTemplate"/>
+
 ## FacebookMessenger.sendAirlineCheckinTemplate
 Send a check-in reminder message.
 
@@ -711,7 +676,7 @@ Send a check-in reminder message.
 }
 ```
 
-<a name="sendAirlineBoardingPassTemplate"/>
+
 ## FacebookMessenger.sendAirlineBoardingPassTemplate
 Send a message that contains boarding passes for one or more flights or one more passengers. Message bubbles will be grouped by flight information -- if the flight information matches, all passengers will be share the same bubble. Multiple bubbles are automatically sent for all boarding_pass elements with different values for flight_info. In the future, we may group all boarding passes into the same bubble.
 
@@ -865,7 +830,7 @@ Send a message that contains boarding passes for one or more flights or one more
 }
 ```
 
-<a name="sendAirlineFlightUpdateTemplate"/>
+
 ## FacebookMessenger.sendAirlineFlightUpdateTemplate
 Send flight status update message.
 
