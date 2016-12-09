@@ -52,7 +52,7 @@ You can send images by uploading them or sharing a URL using the Send API. Suppo
 |----------------|------------|----------
 | pageAccessToken| credentials| Required: Page Access Token obtained from developer.facebook.com
 | recipientId    | String     | Required: Recipient ID
-| image          | String     | URL of image
+| image          | File       | Image to send
 
 
 ## FacebookMessenger.getUserProfile

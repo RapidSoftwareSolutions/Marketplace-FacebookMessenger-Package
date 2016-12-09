@@ -107,8 +107,8 @@ module.exports.do = function(req, res){
             required: true
         }, {
             "name": "image",
-            "type": "String",
-            "info": "URL of image",
+            "type": "File",
+            "info": "Image to send",
             required: false
         }],
         "callbacks": [{
