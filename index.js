@@ -36,6 +36,9 @@ app.post(`/api/${PACKAGE_NAME}/webhook`, function(req, res) {
         });
 
         res.sendStatus(200);
+    } else {
+        const webhookAPI = require('./api/webhook');
+        webhookAPI(req, res);
     }
 });
 

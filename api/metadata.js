@@ -11,6 +11,39 @@ module.exports.do = function(req, res){
         "domain": "facebook.com",
         "credentials": ["pageAccessToken"]
     },
+    "events": [
+        {
+            name: "webhook",
+            description: "Sends a notification every time selected events happen on a subscribed page",
+            payload: {
+                "object": "page",
+                "entry": [
+                    {
+                        "id":"PAGE_ID",
+                        "time":1458692752478,
+                        "messaging":[
+                            {
+                                "sender":{
+                                    "id":"USER_ID"
+                                },
+                                "recipient":{
+                                    "id":"PAGE_ID"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            steps: [
+                'Create a new Facebook App and Page or use existing ones. Go to the App Dashboard and under Product Settings click "Add Product" and select "Messenger."',
+                'In the Webhooks section, click "Setup Webhooks."',
+                'Set the callback URL to: __WEBHOOK_URL__',
+                'Enter the Verify Token "reapid_verification_token" and select the events you would like to receive notifications for under Subscription Fields.',
+                'In the Token Generation section, select your Page. A Page Access Token will be generated for you.',
+                'In the Webhooks section, you can subscribe the webhook for a specific page.'
+            ]
+        }
+    ],
     "blocks": [
         {
             name: "sendTextMessage",
