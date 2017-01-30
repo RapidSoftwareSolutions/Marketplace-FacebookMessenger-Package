@@ -10,10 +10,10 @@ module.exports = (req, res) => {
     const r = {
         callback: 'success',
         contextWrites: {
-            to: JSON.stringify({
+            to: {
                 http_resp: challenge || '',
                 client_msg: body
-            })
+            }
         }
     };
 
