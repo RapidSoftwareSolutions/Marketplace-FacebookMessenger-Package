@@ -41,6 +41,14 @@ module.exports.do = function(req, res){
                 'Enter the Verify Token "reapid_verification_token" and select the events you would like to receive notifications for under Subscription Fields.',
                 'In the Token Generation section, select your Page. A Page Access Token will be generated for you.',
                 'In the Webhooks section, you can subscribe the webhook for a specific page.'
+            ],
+            'args': [
+                {
+                    name: 'verificationToken',
+                    type: 'credentials',
+                    info: 'Verification token',
+                    required: false
+                }
             ]
         }
     ],
