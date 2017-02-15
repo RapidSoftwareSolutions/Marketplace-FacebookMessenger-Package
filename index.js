@@ -24,7 +24,6 @@ app.get(`/api/${PACKAGE_NAME}/webhook`, (req, res) => {
 
 app.post(`/api/${PACKAGE_NAME}/webhook`, function(req, res) {
     let data = req.body;
-    console.log('call');
     if (data.object == 'page') {
         data.entry.forEach(function(pageEntry) {
             let pageID = pageEntry.id;
