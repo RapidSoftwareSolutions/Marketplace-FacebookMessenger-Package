@@ -44,10 +44,10 @@ module.exports.do = function(req, res){
             ],
             'args': [
                 {
-                    name: 'verificationToken',
-                    type: 'credentials',
-                    info: 'Verification token',
-                    required: false
+                    name: 'pageID',
+                    type: 'string',
+                    info: 'Page ID',
+                    required: true
                 }
             ]
         }
