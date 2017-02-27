@@ -44,7 +44,7 @@ module.exports.do = function(req, res){
             ],
             'args': [
                 {
-                    name: 'pageID',
+                    name: 'page_id',
                     type: 'string',
                     info: 'Page ID',
                     required: true
