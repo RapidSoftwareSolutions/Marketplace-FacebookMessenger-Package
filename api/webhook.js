@@ -21,10 +21,15 @@ module.exports = (req, res) => {
             client_msg: body,
             socket_token: ''
         });
+    } else if (!body.entry[0]) {
+        r.callback = 'error';
+        r.contextWrites.to = JSON.stringify({
+            http_resp: '',
+            client_msg: 'Bad request',
+            socket_token: ''
+        });
     } else {
-        console.log(params[0].page_id, body.entry[0].id, params[0].page_id == body.entry[0].id)
         const found = params.find(param => param.page_id == body.entry[0].id);
-        console.log(found)
         if (!found) {
             r.callback = 'error';
             r.contextWrites.to = JSON.stringify({
@@ -37,7 +42,7 @@ module.exports = (req, res) => {
             r.contextWrites.to = JSON.stringify({
                 http_resp: '',
                 client_msg: body,
-                socket_token: found._rapid_socket_token
+                socket_token: found._rapid_sock_token
             });
         }
     }
