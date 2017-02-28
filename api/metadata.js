@@ -40,7 +40,7 @@ module.exports.do = function(req, res){
                 'Set the callback URL to: __WEBHOOK_URL__',
                 'Enter the Verify Token "rapid_verification_token" and select the events you would like to receive notifications for under Subscription Fields, then press "Verify and Save".',
                 'In the Token Generation section, select your Page. A Page Access Token will be generated for you.',
-                'In the Webhooks section, you can subscribe the webhook for a specific page.'
+                'In the Webhooks section, subscribe the webhook for a specific page. You can get the Page ID by navigating to your page and clicking on About. The ID is located under the More Info section.'
             ],
             'args': [
                 {
