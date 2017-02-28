@@ -22,8 +22,9 @@ module.exports = (req, res) => {
             socket_token: ''
         });
     } else {
-        console.log(params, body.entry[0])
-        const found = params.find(param => param.page_id === body.entry[0].id);
+        console.log(params[0].page_id, body.entry[0].id, params[0].page_id == body.entry[0].id)
+        const found = params.find(param => param.page_id == body.entry[0].id);
+        console.log(found)
         if (!found) {
             r.callback = 'error';
             r.contextWrites.to = JSON.stringify({
@@ -40,5 +41,6 @@ module.exports = (req, res) => {
             });
         }
     }
+    console.log(r.contextWrites.to);
     res.status(200).send(r);
 }
