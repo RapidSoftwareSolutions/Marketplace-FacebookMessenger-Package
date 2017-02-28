@@ -22,6 +22,7 @@ module.exports = (req, res) => {
             socket_token: ''
         });
     } else {
+        console.log(params, body.entry[0])
         const found = params.find(param => param.page_id === body.entry[0].id);
         if (!found) {
             r.callback = 'error';
