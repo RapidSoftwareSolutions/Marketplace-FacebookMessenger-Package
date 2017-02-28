@@ -7,7 +7,7 @@ module.exports = (req, res) => {
     } = req.body.args;
     const challenge = body["hub.challenge"];
     const token = body["hub.token"];
-    const resp = {
+    const r = {
         callback: '',
         contextWrites: {
             to: ''
