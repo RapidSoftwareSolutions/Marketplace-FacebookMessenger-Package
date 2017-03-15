@@ -10,7 +10,7 @@ module.exports = (req, res) => {
     const r = {
         callback: '',
         contextWrites: {
-            to: ''
+            to: {}
         }
     };
 
@@ -19,33 +19,33 @@ module.exports = (req, res) => {
         r.contextWrites.to = JSON.stringify({
             http_resp: challenge || token,
             client_msg: body,
-            socket_token: ''
+            params: []
         });
     } else if (!body.entry[0]) {
         r.callback = 'error';
         r.contextWrites.to = JSON.stringify({
             http_resp: '',
             client_msg: 'Bad request',
-            socket_token: ''
+            params: []
         });
     } else {
-        const found = params.find(param => param.page_id == body.entry[0].id);
-        if (!found) {
+        const found = params.filter(param => param.page_id == body.entry[0].id);
+        if (!found.length) {
             r.callback = 'error';
             r.contextWrites.to = JSON.stringify({
                 http_resp: '',
                 client_msg: 'Mismatching tokens',
-                socket_token: ''
+                params: []
             });            
         } else {
             r.callback = 'success';
             r.contextWrites.to = JSON.stringify({
                 http_resp: '',
                 client_msg: body,
-                socket_token: found._rapid_sock_token
+                params: found
             });
         }
     }
-    console.log(r.contextWrites.to);
+
     res.status(200).send(r);
 }
