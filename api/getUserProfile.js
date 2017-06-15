@@ -20,7 +20,11 @@ module.exports = (req, res, callback) => {
         return;
     }
 
-    request({ 
+    if(typeof fields == "object") {
+        fields = fields.join();
+    }
+
+    request({
         method: 'GET',
         url: `https://graph.facebook.com/v2.6/${userId}?fields=${fields}&access_token=${pageAccessToken}`,
     },

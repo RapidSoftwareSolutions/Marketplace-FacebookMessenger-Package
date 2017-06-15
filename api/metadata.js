@@ -122,7 +122,8 @@ module.exports.do = function(req, res){
             required: true
         }, {
             "name": "senderAction",
-            "type": "String",
+            "type": "Select",
+            "options": ["mark_seen","typing_on","typing_off"],
             "info": "`mark_seen`: Mark last message as read; `typing_on`: Turn typing indicators on; `typing_off`: Turn typing indicators off.",            
             required: false
         }],
@@ -174,9 +175,15 @@ module.exports.do = function(req, res){
             required: true
         }, {
             "name": "fields",
-            "type": "String",
+            "type": "List",
             "info": "Comma separated fields string: `first_name`, `last_name`, `profile_pic`, `locale`, `timezone`, `gender`",
-            required: true
+            required: true,
+            "structure": {
+                "name": "field",
+                "type": "Select",
+                "options": ["first_name","last_name","profile_pic","locale","timezone","gender"],
+                "info": ""
+            }
         }],
         "callbacks": [{
             "name": "error",
@@ -306,15 +313,20 @@ module.exports.do = function(req, res){
             required: true
         }, {
             "name": "whitelistedDomains",
-            "type": "JSON",
+            "type": "List",
             "info": "A list of domains being used with URL Buttons and Messenger Extensions. All domains must be valid and use https. Up to 10 domains allowed.",
-            required: true
+            required: true,
+            "structure": {
+                "name": "domain",
+                "type": "String",
+                "info": "Domain being used with URL Buttons and Messenger Extensions.",
+            }
         }, {
             "name": "domainActionType",
             "type": "String",
             "info": "Operation when setting domain. Valid values: `add`, `remove`",
             required: false
-        },],
+        }],
         "callbacks": [{
             "name": "error",
             "info": "error"
@@ -670,7 +682,8 @@ module.exports.do = function(req, res){
             required: true
         }, {
             "name": "webviewHeightRatio",
-            "type": "String",
+            "type": "Select",
+            "options": ["compact","tall","full"],
             "info": "Height of the Webview. Valid values: `compact`, `tall`, `full`.",
             required: false
         }, {
